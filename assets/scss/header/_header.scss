@@ -1,11 +1,11 @@
 .header{
-  background-color: #2D3651;
+  background-color: $color-primary;
   background-image: url(assets/img/img-header.png);
   background-position: 50% 50%;
   background-size: cover;
   min-height: 100vh;
   position: relative;
-  color: #ffffff;
+  color: $color-light;
   padding: 100px 0;
   display: grid;
   align-items: center;
