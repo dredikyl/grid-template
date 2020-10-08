@@ -23,6 +23,26 @@ h1{
     font-size: 1.875rem;
   }
  }
+h2{
+  margin-top: 0;
+  font-family: $font-header;
+  color: $color-primary!important;
+  letter-spacing: 0.23rem;
+  @include lg-min{
+    font-size: 2.5rem;
+    margin-bottom: 55px;
+  }
+  @include lg-md{
+    font-size: 2rem;
+  }
+  @include md-sm{
+    font-size: 1.5rem;
+  }
+  @include sm{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
 a{
   text-decoration: none;
   color: $color-light;
@@ -33,7 +53,8 @@ a{
   display: block;
   font-size: 1.125rem;
   background-color: rgba(255,255,255, 0.1);
-
+  padding: 18px $gap;
+  height: 60px;
   text-align: center;
   transition: background-color 0.5s;
   letter-spacing: 0.1em;
