@@ -1,8 +1,19 @@
 .about{
   background-color: $color-gray-light;
   color: $color-light;
-  padding: 100px 0;
   align-items: center;
+  @include lg-min{
+    padding: 100px 0;
+  }
+  @include lg-md{
+    padding: 100px 0;
+  }
+  @include md-sm{
+    padding: 80px 0;
+  }
+  @include sm{
+    padding: 60px 0;
+  }
   &__container{
     display: grid;
     @extend %container;
@@ -10,18 +21,36 @@
       grid-template-columns: 1fr 271px;
       grid-gap: 100px;
     }
-    @include lg-min{
+    @include lg-md{
       grid-template-columns: 1fr 255px;
       grid-gap: 100px;
     }
-
+    @include md-sm{
+      grid-template-columns: 1fr 236px;
+      grid-gap: 20px;
+    }
+    @include sm{
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
   }
   &__content {
     position: relative;
     color:$color-gray;
     letter-spacing: 0.05em;
     line-height: 1.13;
-    font-size: 1.125rem;
+    @include lg-min{
+      font-size: 1.125rem;
+    }
+    @include lg-md{
+      font-size: 1.125rem;
+    }
+    @include md-sm{
+      font-size: 1rem;
+    }
+    @include sm{
+      font-size: 1rem;
+    }
   }
   &__image{
     background-image: url("../../assets/img/img-lamp-webdev.png");
@@ -29,6 +58,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
+
     height: 100%;
     min-height: 488px;
   }
@@ -43,6 +73,18 @@
     height: 200px;
     content: "";
     background-color: rgba(99, 117, 136, 0.1);
-    right: -50px;
+
+    @include lg-min{
+      right: -50px;
+    }
+    @include lg-md{
+      right: -20px;
+    }
+    @include md-sm{
+      right: -10px;
+    }
+    @include sm{
+      display: none;
+    }
   }
 }

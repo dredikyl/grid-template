@@ -39,8 +39,9 @@ h2{
     font-size: 1.5rem;
   }
   @include sm{
-    font-size: 1.5rem;
+    margin-bottom: 36px;
     text-align: center;
+    font-size: 1.5rem;
   }
 }
 a{
@@ -95,4 +96,8 @@ a{
       min-width: auto;
       width: 100%;
   }
+}
+input {
+  overflow: visible;
+  outline: none;
 }
