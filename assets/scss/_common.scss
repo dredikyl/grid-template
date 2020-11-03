@@ -6,7 +6,6 @@ html{
   font-family:$font-main;
   font-size: $font-size;
   color: $color-gray;
-  letter-spacing: 0.1em;
 }
 h1{
   font-family: $font-header;
@@ -27,7 +26,8 @@ h2{
   margin-top: 0;
   font-family: $font-header;
   color: $color-primary!important;
-  letter-spacing: 0.23rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
   @include lg-min{
     font-size: 2.5rem;
     margin-bottom: 55px;

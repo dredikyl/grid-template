@@ -480,7 +480,6 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #637588;
-  letter-spacing: 0.1em;
 }
 
 h1 {
@@ -494,7 +493,8 @@ h2 {
   margin-top: 0;
   font-family: "Roboto Slab", serif;
   color: #2d3651 !important;
-  letter-spacing: 0.23rem;
+  letter-spacing: 0.1em;
+  line-height: 1.2em;
 }
 
 h3 {
@@ -950,29 +950,59 @@ input {
 }
 
 .form-subscription__item::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.51);
+  color: rgba(99, 117, 150, 0.8);
+  letter-spacing: 0.2rem;
 }
 
 .form-subscription__item::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.51);
+  color: rgba(99, 117, 150, 0.8);
+  letter-spacing: 0.2rem;
 }
 
 .form-subscription__item:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.51);
+  color: rgba(99, 117, 150, 0.8);
+  letter-spacing: 0.2rem;
 }
 
 .form-subscription__item::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.51);
+  color: rgba(99, 117, 150, 0.8);
+  letter-spacing: 0.2rem;
 }
 
 .form-subscription__item::placeholder {
-  color: rgba(255, 255, 255, 0.51);
+  color: rgba(99, 117, 150, 0.8);
+  letter-spacing: 0.2rem;
 }
 
 .form-subscription__item:hover, .form-subscription__item:focus {
+  border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
-  color: rgba #ffffff;
+}
+
+.form-subscription__item:hover::-webkit-input-placeholder, .form-subscription__item:focus::-webkit-input-placeholder {
+  color: #8c9bab;
+  letter-spacing: 0.2rem;
+}
+
+.form-subscription__item:hover::-moz-placeholder, .form-subscription__item:focus::-moz-placeholder {
+  color: #8c9bab;
+  letter-spacing: 0.2rem;
+}
+
+.form-subscription__item:hover:-ms-input-placeholder, .form-subscription__item:focus:-ms-input-placeholder {
+  color: #8c9bab;
+  letter-spacing: 0.2rem;
+}
+
+.form-subscription__item:hover::-ms-input-placeholder, .form-subscription__item:focus::-ms-input-placeholder {
+  color: #8c9bab;
+  letter-spacing: 0.2rem;
+}
+
+.form-subscription__item:hover::placeholder, .form-subscription__item:focus::placeholder {
+  color: #8c9bab;
+  letter-spacing: 0.2rem;
 }
 
 .posts__item {
@@ -1019,18 +1049,16 @@ input {
 
 .posts__content {
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 25px 20px;
-  letter-spacing: 0.04em;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 20px 20px;
   font-family: "Roboto", sans-serif;
 }
 
 .posts__content h3 {
   font-family: "Roboto Slab", serif;
   font-size: 1.125rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
 }
 
 .posts__image {
@@ -1082,6 +1110,8 @@ input {
 .footer {
   background-color: #2d3651;
   color: #ffffff;
+  padding: 45px 20px 70px;
+  text-align: center;
 }
 
 .footer__container {
@@ -1090,11 +1120,12 @@ input {
 
 .footer__icon-list {
   display: grid;
-  grid-template-columns: repeat(5, 50px);
+  grid-template-columns: repeat(auto-fit, minmax(51px, -webkit-max-content));
+  grid-template-columns: repeat(auto-fit, minmax(51px, max-content));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 46px;
+  margin-top: 13px;
   text-align: center;
 }
 
@@ -1115,7 +1146,7 @@ input {
 }
 
 .footer__icon {
-  font-size: 2.2rem;
+  font-size: 2.25rem;
 }
 
 .footer__copyright {
@@ -1127,8 +1158,21 @@ input {
   display: block;
   content: "";
   border-bottom: solid rgba(255, 255, 255, 0.1) 2px;
-  margin: 27px auto;
+  margin: 25px auto 20px;
   width: 74px;
+}
+
+.footer__copyright span:nth-of-type(1) {
+  margin-right: -0.5em;
+  letter-spacing: 0.33em;
+  font-weight: 100;
+  color: #637588;
+}
+
+.footer__copyright span:nth-of-type(2) {
+  letter-spacing: 0.05em;
+  color: #e5e5e5;
+  font-weight: 700;
 }
 
 @media (min-width: 576px) {
@@ -1197,7 +1241,7 @@ input {
     font-size: 1.125rem;
   }
   .posts {
-    padding: 105px 0 100px 0;
+    padding: 100px 0 100px 0;
   }
   .posts__list {
     grid-template-columns: repeat(4, 1fr);
@@ -1252,7 +1296,7 @@ input {
     font-size: 1.125rem;
   }
   .posts {
-    padding: 85px 0 80px 0;
+    padding: 80px 0 80px 0;
   }
   .posts__list {
     grid-template-columns: repeat(3, 1fr);
@@ -1281,6 +1325,7 @@ input {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    letter-spacing: 0.1em;
   }
   .header-navbar__btn {
     display: block;
@@ -1342,7 +1387,7 @@ input {
     font-size: 1rem;
   }
   .posts {
-    padding: 65px 0 60px 0;
+    padding: 60px 0 60px 0;
   }
   .posts__list {
     grid-template-columns: repeat(2, 1fr);
@@ -1395,7 +1440,7 @@ input {
     display: none;
   }
   .posts {
-    padding: 45px 0 40px 0;
+    padding: 40px 0 40px 0;
   }
   .posts__list {
     grid-template-columns: repeat(1, 1fr);

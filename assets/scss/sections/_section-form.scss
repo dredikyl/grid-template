@@ -55,13 +55,18 @@
       padding-right: 30px;
       padding-left: 30px;
       &::placeholder{
-        color: rgba(255, 255, 255, 0.51);
+        color: rgba(99, 117, 150, 0.8);
+        letter-spacing: 0.2rem;
       }
       &:hover,
       &:focus {
-        border-bottom-color: $color-light;
+        border-color: rgba(255, 255, 255, 0.15);
+        border-bottom-color: #ffffff;
         background-color: rgba(255, 255, 255, 0.15);
-        color: rgba$color-light;
+        &::placeholder {
+          color: rgba(140, 155, 171, 1);
+          letter-spacing: 0.2rem;
+        }
       }
       @include lg-min{
         font-size: 1.125rem;
